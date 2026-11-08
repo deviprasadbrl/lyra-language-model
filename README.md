@@ -70,7 +70,7 @@ The architecture uses pre-normalisation, Rotary Positional Embeddings (RoPE), Gr
 <!-- IMAGE PLACEHOLDER: Upload the final corrected architecture diagram to assets/lyra_architecture.png. Replace YOUR_USERNAME with your GitHub username. -->
 
 <p align="center">
-  <img src="assests/lyra_architure.png" alt="Lyra decoder-only Transformer architecture" width="620"/>
+  <img src="assests/lyra_architure.png" alt="Lyra decoder-only Transformer architecture" width="50%"/>
 </p>
 
 <p align="center"><em>Figure 1. Lyra's decoder-only Transformer architecture.</em></p>
@@ -264,7 +264,7 @@ Training progress was monitored through training loss, perplexity, and validatio
 <!-- IMAGE PLACEHOLDER: Upload training_graphs_stacked.png to assets/. -->
 
 <p align="center">
-  <img src="assests/training_val_loss.png" alt="Lyra pretraining loss, perplexity and learning rate" width="80%%"/>
+  <img src="assests/training_val_loss.png" alt="Lyra pretraining loss, perplexity and learning rate" width="80%"/>
 </p>
 
 <p align="center"><em>Figure 2. Pretraining loss, perplexity and learning-rate progression.</em></p>
@@ -686,32 +686,37 @@ The following is an illustrative repository structure. Directory names may chang
 ```text
 lyra-language-model/
 │
+├── Pre_Training/
+│   ├── Pre_Config.py
+│   ├── data.py
+│   ├── param.py
+│   ├── training.py
+│   └── util.py
+│
+├── SFT_Data/
+│   ├── eval.jsonl
+│   └── train.jsonl
+│
+├── SFT_Training/
+│   ├── Data_Pipeline.py
+│   └── Train.py
+│
 ├── assets/
-│   ├── lyra_architecture.png
-│   ├── training_graphs_stacked.png
 │   ├── graph1_benchmark_with_sft.png
-│   └── graph2_sft_benchmarks.png
+│   ├── graph2_sft_benchmarks.png
+│   ├── lyra_architecture.png
+│   └── training_val_loss.png
 │
-├── configs/
-├── model/
-├── tokenizer/
-├── data/
-├── pretraining/
-├── sft/
-├── evaluation/
-│   ├── behavioural/
-│   ├── benchmarks/
-│   └── perplexity.py
+├── my_tokenizer/
+│   ├── tokenizer.json
+│   └── tokenizer_config.json
 │
-├── inference/
-├── checkpoints/
-│   ├── lyra-base/
-│   └── lyra-sft/
-│
-├── requirements.txt
+├── .gitignore
+├── Inference.py
+├── LICENSE
 ├── README.md
-├── TECHNICAL_REPORT.md
-└── LICENSE
+├── requirements.txt
+└── tokenizer_setup.py
 ```
 
 ---
