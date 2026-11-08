@@ -70,7 +70,7 @@ The architecture uses pre-normalisation, Rotary Positional Embeddings (RoPE), Gr
 <!-- IMAGE PLACEHOLDER: Upload the final corrected architecture diagram to assets/lyra_architecture.png. Replace YOUR_USERNAME with your GitHub username. -->
 
 <p align="center">
-  <img src="assests/lyra_architure.png" alt="Lyra decoder-only Transformer architecture" width="720"/>
+  <img src="assests/lyra_architure.png" alt="Lyra decoder-only Transformer architecture" width="620"/>
 </p>
 
 <p align="center"><em>Figure 1. Lyra's decoder-only Transformer architecture.</em></p>
@@ -264,7 +264,7 @@ Training progress was monitored through training loss, perplexity, and validatio
 <!-- IMAGE PLACEHOLDER: Upload training_graphs_stacked.png to assets/. -->
 
 <p align="center">
-  <img src="assests/training_val_loss.png" alt="Lyra pretraining loss, perplexity and learning rate" width="100%"/>
+  <img src="assests/training_val_loss.png" alt="Lyra pretraining loss, perplexity and learning rate" width="80%%"/>
 </p>
 
 <p align="center"><em>Figure 2. Pretraining loss, perplexity and learning-rate progression.</em></p>
