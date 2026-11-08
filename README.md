@@ -70,7 +70,7 @@ The architecture uses pre-normalisation, Rotary Positional Embeddings (RoPE), Gr
 <!-- IMAGE PLACEHOLDER: Upload the final corrected architecture diagram to assets/lyra_architecture.png. Replace YOUR_USERNAME with your GitHub username. -->
 
 <p align="center">
-  <img src="assests/lyra_architure.png" alt="Lyra decoder-only Transformer architecture" width="50%"/>
+  <img src="assets/lyra_architecture.png" alt="Lyra decoder-only Transformer architecture" width="50%"/>
 </p>
 
 <p align="center"><em>Figure 1. Lyra's decoder-only Transformer architecture.</em></p>
@@ -264,7 +264,7 @@ Training progress was monitored through training loss, perplexity, and validatio
 <!-- IMAGE PLACEHOLDER: Upload training_graphs_stacked.png to assets/. -->
 
 <p align="center">
-  <img src="assests/training_val_loss.png" alt="Lyra pretraining loss, perplexity and learning rate" width="80%"/>
+  <img src="assets/training_val_loss.png" alt="Lyra pretraining loss, perplexity and learning rate" width="80%"/>
 </p>
 
 <p align="center"><em>Figure 2. Pretraining loss, perplexity and learning-rate progression.</em></p>
@@ -339,7 +339,7 @@ The SFT pipeline consisted of:
 <!-- IMAGE PLACEHOLDER: Upload graph1_benchmark_with_sft.png to assets/. -->
 
 <p align="center">
-  <img src="assests/graph1_benchmark_with_sft.png" alt="Lyra base and SFT benchmark comparison" width="100%"/>
+  <img src="assets/graph1_benchmark_with_sft.png" alt="Lyra base and SFT benchmark comparison" width="100%"/>
 </p>
 
 <p align="center"><em>Figure 3. Benchmark performance comparison between Lyra-base and Lyra-SFT.</em></p>
@@ -398,7 +398,7 @@ Comparisons should be interpreted cautiously because model training budgets, eva
 <!-- IMAGE PLACEHOLDER: Upload graph2_sft_benchmarks.png to assets/. -->
 
 <p align="center">
-  <img src="assests/graph2_sft_benchmarks.png" alt="Lyra SFT behavioural evaluation and WikiText perplexity" width="100%"/>
+  <img src="assets/graph2_sft_benchmarks.png" alt="Lyra SFT behavioural evaluation and WikiText perplexity" width="100%"/>
 </p>
 
 <p align="center"><em>Figure 4. Behavioural evaluation results and WikiText perplexity comparison.</em></p>
