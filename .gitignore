@@ -1,0 +1,23 @@
+
+__pycache__/
+*.py[cod]
+venv/
+.env
+
+# Model checkpoints
+*.pt
+*.pth
+*.safetensors
+
+# Training outputs
+checkpoints/
+outputs/
+logs/
+
+# Dataset files
+*.npy
+*.npz
+*.csv
+# Pretraining corpus
+data_corpus/
+project_data.txt
