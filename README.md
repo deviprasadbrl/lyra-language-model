@@ -190,7 +190,7 @@ The purpose of combining datasets was to expose the model to different types of 
 |---|---|---:|---:|
 | FineWeb | general-language exposure | 65% | 1.95B |
 | StarCoderData | programming knowledge | 25% | 750M |
-| Cosmopedia | educational explanations | 10% | 750M |
+| Cosmopedia | educational explanations | 10% | 300M |
 
 ### 4.2 Data Processing Pipeline
 
@@ -244,7 +244,7 @@ The training process was distributed across five training sessions, with model c
 | Global batch size | 64 |
 | Gradient accumulation | 16 |
 | Training precision | f16 |
-| Gradient clipping | 0.1 |
+| Gradient clipping | 1.0 |
 | Context length | 2,048 |
 
 ### 5.3 Training Across Multiple Sessions
@@ -749,7 +749,7 @@ Both checkpoints are intended to be released.
 ### 13.4 Run Inference
 
 ```bash
-python inference.py
+python Inference.py
 ```
 
 ### 13.5 Training
