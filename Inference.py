@@ -1,7 +1,7 @@
 import torch
 from tokenizers import Tokenizer
-from Pre_Traning.util import Decoder
-from Pre_Traning.Pre_Config import Config
+from Pre_Training.util import Decoder
+from Pre_Training.Pre_Config import Config
 
 cfg=Config()
 CKPT="best_sft.pt"
