@@ -2,8 +2,8 @@ import math, torch
 import torch.nn.functional as F
 from accelerate import Accelerator
 from Data_Pipeline import make_loaders
-from Pre_Traning.util import Decoder
-from Pre_Traning.Pre_Config import Config
+from Pre_Training.util import Decoder
+from Pre_Training.Pre_Config import Config
 
 # The code written down is specifically written for kaggle environement with kaggle paths. 
 # So while using  this script change the paths as per your environment
