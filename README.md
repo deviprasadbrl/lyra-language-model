@@ -164,7 +164,7 @@ On the Tesla T4:
 | B: SDPA with K/V expansion | 0.396 s | 10,345 tokens/s | 7.04 GB |
 | C: Manual attention | 0.572 s | 7,156 tokens/s | 10.67 GB |
 
-All three implementations produced numerically close outputs in the FP32 correctness comparison, with maximum absolute differences of approximately \(2.3 \times 10^{-6}\).
+All three implementations produced numerically close outputs in the FP32 correctness comparison.
 
 ### 3.5 Experimental Observation
 
@@ -211,7 +211,7 @@ The data preparation process consisted of:
 |---|---|
 | Tokenizer type | GPT-2 (Byte-Level BPE) |
 | Vocabulary size | 50,260 |
-| Special tokens | &#60;\|system\|&#62;, &#60;\|user\|&#62;, &#60;\|assistant\|&#62; |
+| Special tokens | &#60;\|system\|&#62;,&#60;\|user\|&#62;, &#60;\|assistant\|&#62; |
 | Maximum sequence length | 2,048 |
 
 ---
@@ -680,8 +680,6 @@ Potential directions for further investigation include:
 ---
 
 ## 12. Repository Structure
-
-The following is an illustrative repository structure. Directory names may change as the project evolves.
 
 ```text
 lyra-language-model/
