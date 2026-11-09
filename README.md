@@ -737,8 +737,6 @@ pip install -r requirements.txt
 
 ### 13.3 Model Checkpoints
 
-Both checkpoints are intended to be released.
-
 | Checkpoint | Description | Download |
 |---|---|---|
 | Lyra-base | Pretrained model | https://huggingface.co/deviprasadbrl/lyra-base |
