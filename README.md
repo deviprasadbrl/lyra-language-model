@@ -241,7 +241,7 @@ The training process was distributed across five training sessions, with model c
 | Final learning rate | 3e-5 |
 | Weight decay | 0.1 (decay parameter group); 0.0 (no-decay group) |
 | Scheduler | Linear warmup followed by cosine decay |
-| Global batch size | 64 |
+| Global batch size | 128 |
 | Gradient accumulation | 16 |
 | Training precision | f16 |
 | Gradient clipping | 1.0 |
