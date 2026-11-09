@@ -211,7 +211,7 @@ The data preparation process consisted of:
 |---|---|
 | Tokenizer type | GPT-2 (Byte-Level BPE) |
 | Vocabulary size | 50,260 |
-| Special tokens | &lt;|system|&gt;,&lt;|user|&gt;,&lt;|assistant|&gt; |
+| Special tokens | &#60;\|system\|&#62;,&#60;\|user\|&#62;,&#60;\|assistant\|&#62; |
 | Maximum sequence length | 2,048 |
 
 ---
@@ -318,7 +318,7 @@ The objective was to improve the model's interaction behaviour rather than speci
 | Training method | Full fine-tuning |
 | Number of epochs | 2 |
 | Learning rate | 5e-5 peak, 30 warmup steps, then cosine decay to 5e-6 |
-| Loss masking | The loss is computed on the reply tokens plus the closing &lt;|endoftext|&gt; token. |
+| Loss masking | The loss is computed on the reply tokens plus the closing &#60;\|endoftext\|&#62; token. |
 
 **Dataset** : a fixed-system-prompt SFT mix of open data (HuggingFaceTB smol-smoltalk, everyday-conversations, and the smol-constraints, smol-rewrite and systemchats-30k subsets of smoltalk) plus our own script-generated rows (identity, refusals for things a small model can’t do, small arithmetic, poems and jokes, and instruction-following examples built by measuring replies and adding the matching system instruction), filtered for length, markdown and other AI model names, deduplicated, and trained with assistant-only loss masking
 
