@@ -751,6 +751,52 @@ Both checkpoints are intended to be released.
 ```bash
 python Inference.py
 ```
+Lyra's inference script supports interactive commands for managing conversation history and providing additional context during a chat session.
+
+| Command | Description |
+|---|---|
+| `/ctx <passage>` | Sets a context passage for Retrieval-Augmented Generation (RAG). The supplied context can be used by Lyra when answering subsequent questions. |
+| `/noctx` | Removes the previously supplied RAG context. |
+| `/clear` | Clears the current conversation history and starts a new conversation. Previous conversation turns are no longer included in the new conversation. |
+| `/quit` | Exits the interactive chat session. |
+
+#### Example Usage
+
+**1. Providing Context**
+
+```text
+You: /ctx The ESP32 communicates over USB serial at 115200 baud.
+You: What baud rate does the ESP32 use?
+Lyra: The ESP32 uses a baud rate of 115200.
+```
+
+The `/ctx` command allows users to provide information that Lyra can refer to when answering questions.
+
+**2. Removing Context**
+
+```text
+You: /noctx
+```
+
+Removes the previously supplied context. Subsequent questions will no longer use that context.
+
+**3. Clearing Conversation History**
+
+```text
+You: /clear
+```
+
+Starts a fresh conversation by clearing the existing conversation history. Previous turns are no longer available as conversational context.
+
+**4. Exiting Lyra**
+
+```text
+You: /quit
+```
+
+Terminates the interactive inference session.
+
+These commands provide basic control over context management, conversation history, and the interactive inference session.
 
 ### 13.5 Training
 

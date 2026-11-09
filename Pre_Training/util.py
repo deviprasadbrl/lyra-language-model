@@ -231,7 +231,7 @@ class Decoder(nn.Module):
     def forward(self,x):
         x=self.embed(x)
         
-        for layer in enumerate(self.layers):
+        for layer in self.layers:
             x=layer(x)
 
         x=self.RMSNorm(x)

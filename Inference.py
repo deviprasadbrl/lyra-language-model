@@ -4,7 +4,7 @@ from Pre_Training.util import Decoder
 from Pre_Training.Pre_Config import Config
 
 cfg=Config()
-CKPT="best_sft.pt"
+CKPT=r"C:\Users\Devi Prasad\OneDrive\Documents\prep\Machine learning\Lyra\best_sft.pt"
 TOKENIZER="my_tokenizer/tokenizer.json"
 
 SYS,USER,ASSIST,EOS=50257,50258,50259,50256 #these are the token number of the special tokens
@@ -15,6 +15,7 @@ SYSTEM_PROMPT=("You are Lyra, a helpful assistant. "
 TEMPERATURE,TOP_K,TOP_P,REP_PENALTY,MAX_NEW=0.7,30,0.9,1.05,500
 
 device="cuda" if torch.cuda.is_available() else "cpu"
+print(f"Running on: {device}")
 tok=Tokenizer.from_file(TOKENIZER)
 
 def encode(text): 
@@ -45,7 +46,6 @@ def messages_to_ids(messages):
             ids+=[ASSIST]+t+[EOS]
 
     return ids+[ASSIST]
-
 
 def sample_next(logits,generated,temperature,top_k,top_p,rep_pen):
     logits=logits.float().clone()
@@ -86,7 +86,8 @@ def generate(model,prompt_ids,temperature=TEMPERATURE,top_k=TOP_K,top_p=TOP_P,
         x=torch.tensor([ids[-cfg.max_length:]],device=device)
         
         with torch.autocast(device_type="cuda",dtype=torch.float16,enabled=(device == "cuda")):
-            logits = model(x)[0,-1]  
+            logits = model(x)[0, -1] 
+
 
         nxt=sample_next(logits,new,temperature,top_k,top_p,rep_pen)
         
@@ -117,6 +118,7 @@ def chat():
             continue
 
         if user=="/quit":
+            print("Thank you for testing lyra.")
             break
 
         if user=="/clear":
