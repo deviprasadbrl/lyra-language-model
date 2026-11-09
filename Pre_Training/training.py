@@ -7,13 +7,13 @@ from Pre_Config import  Config
 from data import make_datasets
 import os,re,glob,math,time,zlib
 
-# The code written down is specifically written for kaggle environement with kaggle paths. 
-# So while using  this script change the paths as per your environment
+''' The code written down is specifically written for kaggle environement with kaggle paths. 
+    So while using  this script change the paths as per your environment '''
 
 cfg=Config()
 
 ROOT="corpus" #dataset
-OUT="/kaggle/working" #change it as per your out_dir 
+OUT="/kaggle/working" 
 ORDER_PATH ="train_order_b2048.npy" #An data order created so we can use the same order throughout the project
 
 MAX_TOKENS=3000000000   #3 billion tokens

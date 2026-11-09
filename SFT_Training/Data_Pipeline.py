@@ -1,17 +1,16 @@
-import json, random, torch
+import json,torch
 from collections import Counter
 from torch.utils.data import Dataset, DataLoader
 
-# The code written down is specifically written for kaggle environement with kaggle paths. 
-# So while using  this script change the paths as per your environment
+''' The code written down is specifically written for kaggle environement with kaggle paths. 
+    So while using  this script change the paths as per your environment '''
+
 
 TRAIN_PATH="SFT_Datatrain.jsonl"
 VAL_PATH="SFT_Data/eval.jsonl"
 
 SYS,USER,ASSIST,EOS=50257,50258,50259,50256
 MAX_LEN=2048
-SEED=42
-VAL_FRAC=0.04
 
 ROLE_TOKEN={"system":SYS,"user":USER}
 BANNED=["<|system|>","<|user|>","<|assistant|>","<|endoftext|>"]
@@ -106,22 +105,6 @@ def process_file(path, encode):
     return out,stats
 
 
-def split(examples, val_frac=VAL_FRAC, seed=SEED):
-    rng=random.Random(seed)
-    train,val=[],[]
-
-    for s in SOURCES:                               # split each category separately
-        g=[e for e in examples if e["source"]==s]
-        rng.shuffle(g)
-        n_val=max(1,int(len(g)*val_frac)) if g else 0
-
-        val+=g[:n_val]
-        train+=g[n_val:]
-
-    rng.shuffle(train)
-    return train,val
-
-
 def build_dataset(
     tok,
     train_path=TRAIN_PATH,
@@ -189,14 +172,16 @@ def make_loaders(bs,path="/kaggle/working/sft_tokenized.pt"):
     
     return train, val
 
+'''For testing the Data Pipeline'''
 
-def sanity_check(loader, tok, n=3):
-    b=next(iter(loader))
+# def sanity_check(loader, tok, n=3):
+#     b=next(iter(loader))
     
-    for i in range(n):
-        ids,lab=b["input_ids"][i],b["labels"][i]
-        real=ids[(ids!=EOS)|(lab!=-100)]    # drop the padding
+#     for i in range(n):
+#         ids,lab=b["input_ids"][i],b["labels"][i]
+#         real=ids[(ids!=EOS)|(lab!=-100)]    # drop the padding
         
-        print("FULL   :", tok.decode(real.tolist(), skip_special_tokens=False))
-        print("LEARNED:", tok.decode(lab[lab != -100].tolist(), skip_special_tokens=False))
-        print("-" * 50)
+#         print("FULL   :", tok.decode(real.tolist(), skip_special_tokens=False))
+#         print("LEARNED:", tok.decode(lab[lab != -100].tolist(), skip_special_tokens=False))
+#         print("-" * 50)
+

@@ -5,13 +5,13 @@ from Data_Pipeline import make_loaders
 from Pre_Training.util import Decoder
 from Pre_Training.Pre_Config import Config
 
-# The code written down is specifically written for kaggle environement with kaggle paths. 
-# So while using  this script change the paths as per your environment
+''' The code written down is specifically written for kaggle environement with kaggle paths. 
+    So while using  this script change the paths as per your environment '''
 
 cfg=Config()
 
 BASE_CKPT="final_model.pt"
-OUT_DIR="/kaggle/working" #change it as per your out_dir 
+OUT_DIR="/kaggle/working" 
 EPOCHS=3
 MICRO=4
 ACCUM=8
