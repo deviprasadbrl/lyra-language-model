@@ -135,6 +135,10 @@ def build_dataset(
     print("val per source:", dict(Counter(e["source"] for e in val)))
 
 
+'''Once the json files are tokenized and saved inside .pt file we can directly use that to make batches using data loader the
+    below code do the exact thing '''
+
+
 class SFTDataset(Dataset):
     def __init__(self, ex):
         self.ex=ex
