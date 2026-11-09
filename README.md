@@ -314,7 +314,7 @@ The objective was to improve the model's interaction behaviour rather than speci
 |---|---|
 | Dataset sources | [**Dataset**] |
 | Number of examples | 27,000 |
-| Data format | JSONL:{"source": "...", "messages": [{"role": "system" or "user" or "assistant", "content": "..."}]} |
+| Data format | JSONL: {"source":"...", "messages":[{"role": "system" or "user" or "assistant", "content":"..."}]} |
 | Training method | Full fine-tuning |
 | Number of epochs | 2 |
 | Learning rate | 5e-5 peak, 30 warmup steps, then cosine decay to 5e-6 |
@@ -786,6 +786,12 @@ Dataset licences and usage restrictions should be reviewed independently before 
 3. **GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints** — Ainslie et al. (2023).  
    https://arxiv.org/abs/2305.13245
 
+4. **GLU Variants Improve Transformer** — Shazeer (2020).
+   https://arxiv.org/abs/2002.05202
+  
+5. **Root Mean Square Layer Normalization** — Zhang & Sennrich (2019).
+   https://arxiv.org/abs/2002.05202
+
 ### 14.3 Software and Documentation
 
 - PyTorch: https://pytorch.org/
@@ -805,7 +811,7 @@ See the LICENSE file for details.
 
 ## Acknowledgements
 
-This project was developed using PyTorch and publicly available datasets, research papers, and open-source software.
+This project was developed using PyTorch and publicly available datasets, research papers, and open-source software and youtube videos.
 
 The architectural components and methods used in this implementation are based on the research contributions cited above.
 
