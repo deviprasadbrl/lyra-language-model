@@ -211,7 +211,7 @@ The data preparation process consisted of:
 |---|---|
 | Tokenizer type | GPT-2 (Byte-Level BPE) |
 | Vocabulary size | 50,260 |
-| Special tokens | &#60;\|system\|&#62;,&#60;\|user\|&#62;,&#60;\|assistant\|&#62; |
+| Special tokens | &#60;\|system\|&#62;, &#60;\|user\|&#62;, &#60;\|assistant\|&#62; |
 | Maximum sequence length | 2,048 |
 
 ---
